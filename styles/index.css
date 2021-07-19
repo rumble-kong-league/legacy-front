@@ -1,0 +1,121 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Import Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Source+Serif+Pro:wght@300;400;600;700&display=swap");
+
+  /* Global Styles */
+  html {
+    @apply overflow-x-hidden text-white;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    position: relative;
+    background-color: black;
+  }
+
+  img {
+    @apply max-w-full select-none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+@layer components {
+  .yellow-button {
+    @apply h-8 sm:h-12 w-24 sm:w-36 bg-yellow-400 text-black font-semibold text-sm sm:text-2xl;
+  }
+}
+
+/* ------------------------------- */
+/* Hamburger Menu Styles */
+.bm-burger-button {
+  position: relative;
+  width: 36px;
+  height: 30px;
+}
+
+.bm-burger-bars {
+  background: black;
+  height: 14% !important;
+}
+
+.bm-burger-bars-hover {
+  background: gray;
+}
+
+.bm-cross-button {
+  right: 12px !important;
+  top: 12px !important;
+}
+
+.bm-cross {
+  background: white;
+  height: 20px !important;
+}
+
+.bm-menu-wrap {
+  position: relative;
+  top: 0px;
+  height: 100vh;
+  width: 200px !important;
+}
+
+.bm-menu {
+  background: black;
+  padding: 2em 1em 0;
+  font-size: 1.25em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item {
+  display: inline-block;
+  color: white;
+}
+
+.bm-item-list {
+  padding: 0.5em;
+}
+
+.bm-overlay {
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  right: 0;
+  top: 0;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: black;
+  background: rgba(251, 191, 36, 1);
+}
+
+::selection {
+  color: black;
+  background: rgba(251, 191, 36, 1);
+}
+
+@media (max-width: 768px) {
+  #banner-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #banner-mobile {
+    height: 40vmax;
+  }
+}
+
+.yl-400 {
+  color: rgba(251, 191, 36, 1);
+}
